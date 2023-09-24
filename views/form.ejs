@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/form.css" />
+    <title>RDooley Assign4</title>
+  </head>
+  <body onload="displayInv();">
+    <h1>Bob's Online Book Store</h1>
+    <nav class="top_menu">
+      <ul>
+        <li>
+          <a href="/">Order Form</a>
+        </li>
+        <li>
+          <a href="/allorders">All Orders</a>
+        </li>
+      </ul>
+    </nav>    <hr />
+    <span id="dateArea" style="float: right">Date/Time</span>
+    <br />
+    <!-- Store Inventory Area -->
+    <div class="full">
+      <fieldset>
+        <legend>Store Items</legend>
+        <br />
+        <form action="" method="Post">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Product Name</th>
+            <th id="priceHead">Price (CDN)</th>
+            <th>Image</th>
+            <th>In Cart</th>
+          </tr>
+          <tbody id="inventoryOutput">
+            <tr>
+              <td>
+                b0001
+              </td>
+              <td>Pet Semetary</td>
+              <td>$9.99</td>
+              <td>
+                <img src="/imgs/petSem.png" alt="">
+              </td>
+              <td>
+                <input name="semetary" type="text" placeholder="Enter quantity">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                b0002
+              </td>
+              <td>A Smarter Way to Learn JavaScript</td>
+              <td>$19.99</td>
+              <td>
+                <img src="/imgs/smartJS.avif" alt="">
+              </td>
+              <td>
+                <input name="smarter" type="text" placeholder="Enter quantity">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                b0003
+              </td>
+              <td>Supernatural</td>
+              <td>$5.99</td>
+              <td>
+                <img src="/imgs/supernatural.jpg" alt="">
+              </td>
+              <td>
+                <input name="supernatural" type="text" placeholder="Enter quantity">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Select Items - Fill Customer info -->
+        <div class="cust-info">
+          <legend>Please fill out the below form</legend> 
+          <hr>
+          <p>
+            Customer Name:
+            <input name="name" type="text" id="" />
+            &nbsp;
+          </p>
+          <p>
+            Email:
+            <input name="email" type="text" value="" id="" />
+            &nbsp;
+          </p>
+          <p>
+            Phone #
+            <input name="phone" type="text" id="" />
+            &nbsp;
+          </p>
+          <p>
+            Delivery Address:
+            <input name="address" type="text" value="" id="" />
+            &nbsp;
+          </p>
+          <p>
+            City:
+            <input name="city" type="text" value="" id="" />
+          </p>
+          <p>Province</p>
+      <select name="province" id="province">
+          <option value="">----- Select -----</option>
+          <option value="ON">ON</option>
+          <option value="QC">QC</option>
+          <option value="NL">NL</option>
+          <option value="NS">NS</option>
+          <option value="NB">NB</option>
+          <option value="PE">PE</option>
+          <option value="MB">MB</option>
+          <option value="SK">SK</option>
+          <option value="AB">AB</option>
+          <option value="BC">BC</option>
+          <option value="NT">NT</option>
+          <option value="YU">YU</option>
+          <option value="NU">NU</option>
+        </select>
+        <p>Delivery Preference</p>
+        <select name="prefer" id="prefer" style="margin-bottom: 1rem;">
+            <option value="">----- Select -----</option>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Evening">Evening</option>
+          </select>
+        <br>
+
+          
+          <input type="submit" value="Submit" style="width: 40%;" />
+          <p id="errors">
+            <% if(typeof(errors) != 'undefined') { 
+               for(var error of errors){
+              %>
+                <p><%= error.msg %></p>
+            <% 
+              }
+              }
+             %>
+          </p>
+        </div>
+        </form>
+      </fieldset>
+    </div>
+
+    <br />
+
+    <!-- Cart Area -->
+    <fieldset class="fieldset" style="display: flex; justify-content: center;">
+      <legend>Your Cart</legend>
+            <div class="div">
+        <div class="formData">
+          <% if(typeof(name) != 'undefined'){ %>
+          <p id="formResult">Your Receipt :</p>
+          <table>
+            <tr>
+              <th>Name:</th>
+              <td><%= name %></td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td><%= email %></td>
+            </tr>
+            <tr>
+              <th>Phone:</th>
+              <td><%= phone %></td>
+            </tr>
+            <tr>
+              <th>Address:</th>
+              <td><%= address %></td>
+            </tr>
+            <tr>
+              <th>City:</th>
+              <td><%= city %></td>
+            </tr>
+            <tr>
+              <th>Province:</th>
+              <td><%= province %></td>
+            </tr>
+            <tr>
+              <th>Pet Semetary:</th>
+              <td><%= petsem %></td>
+            </tr>
+            <tr>
+              <th>Smart JS:</th>
+              <td><%= smarter %></td>
+            </tr>
+            <tr>
+              <th>Supernatural:</th>
+              <td><%= supernat %></td>
+            </tr>
+            <tr>
+              <th>Delivery Preference:</th>
+              <td><%= prefer %></td>
+            </tr>
+            <tr>
+              <th>SubTotal:</th>
+              <td><%= subTotal.toFixed(2) %></td>
+            </tr>
+            <tr>
+              <th>Tax:</th>
+              <td><%= tax.toFixed(2) %></td>
+            </tr>
+            <tr>
+              <th>Total:</th>
+              <td><%= total.toFixed(2) %></td>
+            </tr>
+          </table>
+          <% } %>
+        </div>
+      </div>
+    </fieldset>
+    <br />
+
+    <script>
+      var currentDT = new Date();
+      document.getElementById("dateArea").innerHTML = currentDT;
+      </script>
+  </body>
+</html>

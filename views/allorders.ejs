@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/form.css" />
+    <title>RDooley Assign4</title>
+  </head>
+  <body style="display: flex; justify-content: center; flex-wrap: wrap">
+    <h1 style="width: 100%">Bob's Online Book Store</h1>
+    <nav class="top_menu">
+      <ul>
+        <li>
+          <a href="/">Order Form</a>
+        </li>
+        <li>
+          <a href="/allorders">All Orders</a>
+        </li>
+      </ul>
+    </nav>
+    <hr />
+    <section class="full" style="justify-content: center">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Province</th>
+            <th>Pet Semetary</th>
+            <th>Smart JS</th>
+            <th>Supernatural</th>
+            <th>Delivery Preference</th>
+            <th>Sub Total</th>
+            <th>Tax</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(var order of orders) { %>
+          <tr>
+            <td><%= order.name %></td>
+            <td><%= order.email %></td>
+            <td><%= order.phone %></td>
+            <td><%= order.address %></td>
+            <td><%= order.city %></td>
+            <td><%= order.province %></td>
+            <td><%= order.petsem %></td>
+            <td><%= order.smarter %></td>
+            <td><%= order.supernat %></td>
+            <td><%= order.prefer %></td>
+            <td><%= order.subTotal.toFixed(2) %></td>
+            <td><%= order.tax.toFixed(2) %></td>
+            <td><%= order.total.toFixed(2) %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </section>
+  </body>
+</html>
