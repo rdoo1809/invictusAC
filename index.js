@@ -11,8 +11,7 @@ myApp.set('view engine', 'ejs');
 
 
 myApp.get('/', function(req, res){
-res.render('home'); // no need to add .ejs to the file
-name
+res.render('home');
 });
 
 
