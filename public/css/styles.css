@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     background-color: black;
     overflow-x: hidden;
+    font-family: "Fjalla One", sans-serif;
   }
   
   
