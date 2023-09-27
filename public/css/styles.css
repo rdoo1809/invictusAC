@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    overflow-x: hidden;
+  }
+  
+  
+  /* Navbar styling */
+  nav {
+    width: 100%;
+    min-height: 140px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    z-index: 1;
+  }
+  
+  .navbar {
+    display: none;
+  }
+  
+  .logo {
+    height: 140px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+  }
+  
+  .nav-item {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    padding-right: 1.5rem;
+    text-decoration: none;
+    font-family: "Fjalla One", sans-serif;
+  }
+  .nav-item:hover {
+    color: gold;
+  }
+  
+  /* Hamburger Related */
+  .navbar.show {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    text-transform: uppercase;
+    padding: 0 5px 0 5px;
+  }
+  
+  .hamburger {
+    border: 0;
+    color: white;
+    background-color: transparent;
+    margin-top: -90px;
+  }
+  
+  .hamburger:focus {
+    outline: none;
+  }
+  
+  @media only screen and (min-width: 701px) {
+    .hamburger {
+      display: none;
+    }
+    .navbar {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      list-style-type: none;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+  }
+  /* End of Burger */
+  /* End of Nav Styles */
