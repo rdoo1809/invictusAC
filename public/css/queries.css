@@ -1,0 +1,25 @@
+/* Media Queries */
+@media only screen and (max-width: 701px) {
+  .nav-item {
+    font-size: 1.2rem;
+  }
+
+  .large-writing {
+    font-size: 2rem;
+    padding: 0;
+  }
+  .track-art {
+    height: 150px;
+  }
+  .main-image,
+  .main-photo {
+    height: 150px;
+  }
+  .about-title {
+    font-size: 2rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
