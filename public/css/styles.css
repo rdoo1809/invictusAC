@@ -6,7 +6,6 @@ body {
     font-family: "Fjalla One", sans-serif;
   }
   
-  
   /* Navbar styling */
   nav {
     width: 100%;
@@ -78,3 +77,20 @@ body {
   }
   /* End of Burger */
   /* End of Nav Styles */
+
+  /* Main Body Styles */
+.large-words {
+  border-bottom: 2px solid gold;
+  height: 120px;
+  font-size: 4rem;
+  color: black;
+  font-family: "Fjalla One", sans-serif;
+  margin-top: 140px;
+  background-color: white;
+  text-align: center;
+  font-weight: 800;
+  line-height: 120px;
+}
+.title {
+  font-size: 6rem;
+}
