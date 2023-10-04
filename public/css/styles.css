@@ -148,5 +148,28 @@ body {
   justify-content: center;
 }
 
+/* Footer Styles */
+footer {
+  min-height: 140px;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  display: table-cell;
+  vertical-align: middle;
+}
+.footer-p {
+  color: white;
+  margin-top: 20px;
+  font-family: "Fjalla One", sans-serif;
+}
+.icons {
+  padding-top: 0;
+}
+.footer-icons {
+  margin: 0 6px;
+}
+
+/* End of Footer Styles */
+
 
 
