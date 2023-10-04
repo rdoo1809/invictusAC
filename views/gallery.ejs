@@ -4,8 +4,98 @@
 
 
 <!-- Body -->
+<div class="large-words">GALLERY</div>
+
+<div class="full-img" id="fullImgBox">
+  <img src="./images/invicGallery/charGuelph.jpeg" id="fullImg" />
+  <span onclick="closeFullImg();">x</span>
+</div>
+<p class="gallery-words">
+  CHECK OUT SOME OF THE HIGHLIGHTS FROM OUR PAST SEASONS
+</p>
+<div class="image-gallery">
+  <img
+    src="./images/invicGallery/charGuelph.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/raySiblings.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/rayAiden.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/girlRelay.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/johnray.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/teamO.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/mattMedal.png"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/aidenMedal.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/bellaRay.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/squad2018.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/goldRelay.png"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/sumGames.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/willJump.png"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/alissaRay.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/deRiley.jpeg"
+    onclick="openFullImg(this.src);"
+    alt="" />
+  <img
+    src="./images/invicGallery/squad2017.png"
+    onclick="openFullImg(this.src);"
+    alt="" />
+</div>
+
+
 
 <%- include('layouts/nameLogo'); -%>
+<script>
+    var fullImgBox = document.getElementById("fullImgBox");
+    var fullImg = document.getElementById("fullImg");
+  
+    function openFullImg(pic) {
+      fullImgBox.style.display = "flex";
+      fullImg.src = pic;
+    }
+  
+    function closeFullImg() {
+      fullImgBox.style.display = "none";
+    }
+  </script>
 <!-- Footer -->
 <%- include('layouts/footer'); -%>
 <%- include('layouts/foot'); -%>
