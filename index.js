@@ -9,10 +9,19 @@ myApp.use(express.static(__dirname+'/public'));
 myApp.set('view engine', 'ejs');
 
 
-
+//render home
 myApp.get('/', function(req, res){
 res.render('home');
 });
+
+//
+
+//
+
+
+//
+
+//
 
 
 myApp.listen(3000, function(){
