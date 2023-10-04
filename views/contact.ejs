@@ -2,8 +2,36 @@
 <!-- NAV -->
 <%- include('layouts/nav'); -%>
 
-
-<!-- Body -->
+<!-- Main Body -->
+<div class="large-words">CONTACT INVICTUS</div>
+<!-- Form -->
+<section>
+  <form
+    style="display: flex; justify-content: center; flex-wrap: wrap"
+    action="../scripts/mail.php"
+    method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" />
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" />
+    <label for="subject">Subject:</label>
+    <input type="text" name="subject" id="subject" />
+    <label for="message">Message</label>
+    <textarea name="message" cols="30" rows="5"></textarea>
+    <div
+      class="g-recaptcha recaptcha"
+      data-sitekey="6Le4qJ0kAAAAALw0RhRacWdVjTqxQ7gVfqd2VMsk"
+      data-action="LOGIN"></div>
+    <input type="submit" value="Send" />
+  </form>
+  <div class="name-logo-cont">
+    <img
+      class="name-logo"
+      src="../imgs/name-logo.png"
+      alt="Logo for Invictus" />
+  </div>
+</section>
+<!-- End of Form -->
 
 <%- include('layouts/nameLogo'); -%>
 <!-- Footer -->
