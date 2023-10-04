@@ -18,16 +18,23 @@ res.render('home');
 myApp.get('/about', function(req, res){
     res.render('about');
 });
-//
+
+//history
 myApp.get('/history', function(req, res){
     res.render('history');
 });
 
-//
+//gallery
+myApp.get('/gallery', function(req, res){
+    res.render('gallery');
+});
 
-//
+//contact
+myApp.get('/contact', function(req, res){
+    res.render('contact');
+});
 
-
+//listening on
 myApp.listen(3000, function(){
     console.log("Application started and listening on port 3000");
 });
