@@ -281,7 +281,7 @@ input,
 textarea,
 label {
   display: block;
-  margin: 0 auto;
+  margin: 4px auto;
   width: 100%;
   color: white;
 }
