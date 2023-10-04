@@ -168,8 +168,18 @@ footer {
 .footer-icons {
   margin: 0 6px;
 }
-
 /* End of Footer Styles */
 
+/* Name Logo */
+.name-logo-cont {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid gold;
+  background-color: white;
+}
+.name-logo {
+  max-height: 140px;
+}
 
 
