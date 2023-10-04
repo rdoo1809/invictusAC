@@ -19,7 +19,9 @@ myApp.get('/about', function(req, res){
     res.render('about');
 });
 //
-
+myApp.get('/history', function(req, res){
+    res.render('history');
+});
 
 //
 
