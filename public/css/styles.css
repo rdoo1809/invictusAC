@@ -79,12 +79,12 @@ body {
   /* End of Nav Styles */
 
   /* Main Body Styles */
-.large-words {
+.banner {
   border-bottom: 2px solid gold;
+  border-top: 2px solid gold;
   height: 120px;
   font-size: 4rem;
   color: black;
-  font-family: "Fjalla One", sans-serif;
   margin-top: 140px;
   background-color: white;
   text-align: center;
