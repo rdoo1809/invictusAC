@@ -100,4 +100,27 @@ body {
   width: 100vw;
 }
 
+.main-writing-cont {
+  height: 600px;
+  width: 100%;
+  border-top: 2px solid gold;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.large-writing {
+  width: 100%;
+  font-size: 4rem;
+  color: black;
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  padding: 0 3rem;
+}
+.track-art {
+  height: 200px;
+}
+
 
