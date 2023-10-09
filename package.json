@@ -1,7 +1,10 @@
 {
   "name": "mywebsite",
   "version": "1.0.0",
-  "description": "my first website in express",
+  "engines": {
+    "node": "v18.18.0"
+  },
+  "description": "invictus express site",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
