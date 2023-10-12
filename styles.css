@@ -368,3 +368,18 @@ label {
 .snaps-inline > * {
   scroll-snap-align: start;
 }
+
+.media-element img {
+  max-width: 100%; /* This ensures the image won't exceed its container's width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Apply additional styles for smaller screens (mobile devices) */
+@media (max-width: 767px) {
+  .media-scroller {
+      grid-auto-columns: 45%; /* Adjust column width for smaller screens */
+  }
+  .media-element {
+      margin: 8px; /* Adjust margin for smaller screens */
+  }
+}
