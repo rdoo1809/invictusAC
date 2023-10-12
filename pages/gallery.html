@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap and fonts Below -->
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One"
+      rel="stylesheet" />
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../queries.css" />
+    <title>Gallery</title>
+    <link rel="shortcut icon" href="../imgs/logo.png" />
+  </head>
+  <body class="main-body home-body">
+    <!-- Navbar -->
+    <nav>
+      <a href="../index.html">
+        <img
+          class="logo"
+          src="../imgs/logo.png"
+          alt="Invictus Athletics Club Logo"
+      /></a>
+      <button class="hamburger" id="hamburger">
+        <i class="fas fa-2x fa-bars"></i>
+      </button>
+      <ul class="navbar" id="nav-list">
+        <li><a class="nav-item" href="../index.html">HOME</a></li>
+        <li><a class="nav-item" href="./about.html">ABOUT</a></li>
+        <li><a class="nav-item" href="./history.html">HISTORY</a></li>
+        <li><a class="nav-item" href="./gallery.html">GALLERY</a></li>
+        <li><a class="nav-item" href="./contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+    <!-- End of Nav -->
+    <!-- Main Body -->
+    <div style="border-top: 2px solid gold;" class="large-words">GALLERY</div>
+
+    <div class="full-img" id="fullImgBox">
+      <img src="../imgs/invicGallery/charGuelph.jpeg" id="fullImg" />
+      <span onclick="closeFullImg();">x</span>
+    </div>
+    <p class="gallery-words">
+      CHECK OUT SOME OF THE HIGHLIGHTS FROM OUR PAST SEASONS
+    </p>
+    <div class="image-gallery">
+      <img
+        src="../imgs/invicGallery/charGuelph.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/raySiblings.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/rayAiden.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/girlRelay.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/johnray.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/teamO.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/mattMedal.png"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/aidenMedal.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/bellaRay.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/squad2018.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/goldRelay.png"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/sumGames.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/willJump.png"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/alissaRay.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/deRiley.jpeg"
+        onclick="openFullImg(this.src);"
+        alt="" />
+      <img
+        src="../imgs/invicGallery/squad2017.png"
+        onclick="openFullImg(this.src);"
+        alt="" />
+    </div>
+
+    <div class="name-logo-cont">
+      <img
+        class="name-logo"
+        src="../imgs/name-logo.png"
+        alt="Logo for Invictus" />
+    </div>
+
+    <!-- End of Main Body -->
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="footer-p">
+        ELITE TRACK & FIELD CLUB OPERATING OUT OF WATERLOO REGION
+      </p>
+      <section class="icons">
+        <a href="https://www.instagram.com/invictusathletics/" target="_blank">
+          <i
+            class="fa-brands fa-2x fa-instagram footer-icons"
+            style="color: rgb(255, 138, 157)"></i
+        ></a>
+        <a href="./contact.html" style="text-decoration: none">
+          <i
+            class="fa-solid fa-2x fa-envelope footer-icons"
+            style="color: white"></i>
+        </a>
+        <a href="https://www.facebook.com/invictusathletics/" target="_blank"
+          ><i
+            class="fa-brands fa-2x fa-square-facebook footer-icons"
+            style="color: blue"></i
+        ></a>
+      </section>
+      <p class="footer-p">
+        <strong>&copy</strong> INVICTUS ATHLETICS CLUB 2023
+      </p>
+    </footer>
+    <!-- End -->
+
+    <script>
+      var fullImgBox = document.getElementById("fullImgBox");
+      var fullImg = document.getElementById("fullImg");
+
+      function openFullImg(pic) {
+        fullImgBox.style.display = "flex";
+        fullImg.src = pic;
+      }
+
+      function closeFullImg() {
+        fullImgBox.style.display = "none";
+      }
+    </script>
+
+    <!-- JavaScript and dependencies CDN -->
+    <script src="../scripts/hamburger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d2c157295a.js"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
