@@ -378,6 +378,8 @@ label {
 @media (max-width: 767px) {
   .media-scroller {
       grid-auto-columns: 45%; /* Adjust column width for smaller screens */
+      overflow-y: hidden;
+      overflow-x: hidden;
   }
   .media-element {
       margin: 8px; /* Adjust margin for smaller screens */
